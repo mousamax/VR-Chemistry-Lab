@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wobble : MonoBehaviour
+public class LiquidBehavior : MonoBehaviour
 {
+
     Renderer rend;
     Vector3 lastPos;
     Vector3 velocity;
@@ -18,36 +19,38 @@ public class Wobble : MonoBehaviour
     float wobbleAmountToAddZ;
     float pulse;
     float time = 0.5f;
-    float fill = 1f;
+    float fill;
     public string FillName;
-    public ParticleSystem dropping;
 
-    // Use this for initialization
+    public GameObject LiquidSpawner;
+
+
+    // Start is called before the first frame update
     void Start()
     {
         rend = GetComponent<Renderer>();
-        rend.material.SetFloat("_fill2", fill);
+        fill = rend.material.GetFloat(FillName);
+        //rend.material.SetFloat("_fill2", fill);
     }
-    private void Update()
-    {
 
-        if (Vector3.Angle(Vector3.down, dropping.gameObject.transform.forward) <= 90f && fill >= -1f)
+    // Update is called once per frame
+    void Update()
+    {
+        if (Vector3.Angle(Vector3.down, LiquidSpawner.transform.forward) <= 90f && fill >= -1f)
         {
-            dropping.Play();
-            fill -= 0.3f * Time.deltaTime;
+            //dropping.Play();
+            Debug.Log("entered");
+            LiquidSpawner.GetComponent<WaterDropsSpawner>().StartDrop();
+            float FillDroped = 0.3f * Time.deltaTime;
+            fill -= FillDroped;
+            LiquidSpawner.GetComponent<WaterDropsSpawner>().IncreaseFillValue(FillDroped);
             rend.material.SetFloat(FillName, fill);
-            
         }
         else
         {
-            dropping.Stop();
+            //dropping.Stop();
+            LiquidSpawner.GetComponent<WaterDropsSpawner>().EndDrop();
         }
-
-        //if (fill > 0)
-        //{
-        //    fill -= 0.1f * Time.deltaTime;
-        //    rend.material.SetFloat("_fill2", fill);
-        //}
 
         time += Time.deltaTime;
         // decrease wobble over time
@@ -75,28 +78,12 @@ public class Wobble : MonoBehaviour
         // keep last position
         lastPos = transform.position;
         lastRot = transform.rotation.eulerAngles;
-
-        
     }
 
-    private void OnParticleCollision(GameObject other)
+    public void FillLiquidContainer(float addfill)
     {
-        if (fill <= 1f)
-        {
-            fill += 0.3f * Time.deltaTime;
-            if (fill > 1f)
-                fill = 1f;
-            rend.material.SetFloat(FillName, fill);
-            //ParticleSystem.Particle[] particles = new ParticleSystem.Particle[dropping.particleCount];
-            //int size = dropping.GetParticles(particles);
-            ////for(int i = 0; i < size;i++)
-            ////{
-            ////    particles[i].remainingLifetime = 0;
-            ////}
-            ////dropping.SetParticles(particles, size);
-
-        }
+        fill += addfill;
+        rend.material.SetFloat(FillName, fill);
     }
 
 }
-

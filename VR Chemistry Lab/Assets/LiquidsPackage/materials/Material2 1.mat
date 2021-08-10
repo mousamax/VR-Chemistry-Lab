@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Material2
+  m_Name: Material2 1
   m_Shader: {fileID: -6465566751694194690, guid: 1baf40a1828c11143baf237457642d04, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -91,7 +91,7 @@ Material:
     m_Floats:
     - Vector1_47c3d7f9dbe7462bb81326b4d68393d5: 0
     - Vector1_608b72011eae447ea01a63f1e9d24c02: 3
-    - Vector1_76c22488aeab431aabd3e52c3eaff4c9: 3
+    - Vector1_76c22488aeab431aabd3e52c3eaff4c9: 0
     - Vector1_903d986645ff44b58a360fc8f507894d: 0
     - _AlphaClip: 0
     - _Blend: 0
@@ -123,6 +123,7 @@ Material:
     - _ZWrite: 1
     - _fill: 0
     - _fill2: 0
+    - _fill3: 1
     m_Colors:
     - Color_2fefd8e1a99a4d158a13eba51e575822: {r: 0.98039216, g: 0.8954516, b: 0.44705886, a: 0}
     - Color_4beac76ce7c34d629b5cc6460ea6ecdb: {r: 0.77254903, g: 0.26033515, b: 0, a: 0}
