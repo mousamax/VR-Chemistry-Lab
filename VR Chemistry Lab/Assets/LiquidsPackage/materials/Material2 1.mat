@@ -122,7 +122,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     - _fill: 0
-    - _fill2: 0
+    - _fill2: 1
     - _fill3: 1
     m_Colors:
     - Color_2fefd8e1a99a4d158a13eba51e575822: {r: 0.98039216, g: 0.8954516, b: 0.44705886, a: 0}
