@@ -41,12 +41,12 @@ public class LiquidBehavior : MonoBehaviour
         Empty = true;
         rend = GetComponent<Renderer>();
         fill = rend.material.GetFloat(FillName);
-        if(fill > -1)
+        if(fill > -0.1)
         {
             Empty = false;
         }
 
-        if (fill >= 1)
+        if (fill >= 0.1)
         {
             Filled = true;
         }
@@ -60,12 +60,12 @@ public class LiquidBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Angle(Vector3.down, LiquidSpawner.transform.forward) <= 90f && fill >= -1f)
+        if (Vector3.Angle(Vector3.down, LiquidSpawner.transform.forward) <= 90f && fill >= -0.1f && !Empty)
         {
             //dropping.Play();
             //Debug.Log("entered");
             LiquidSpawner.GetComponent<WaterDropsSpawner>().StartDrop();
-            float FillDroped = 0.3f * Time.deltaTime;
+            float FillDroped = 0.03f * Time.deltaTime;
             fill -= FillDroped;
             LiquidSpawner.GetComponent<WaterDropsSpawner>().IncreaseFillValue(FillDroped);
             LiquidSpawner.GetComponent<WaterDropsSpawner>().LiquidColor = Chem.Color;
@@ -76,6 +76,7 @@ public class LiquidBehavior : MonoBehaviour
         {
             //dropping.Stop();
             LiquidSpawner.GetComponent<WaterDropsSpawner>().EndDrop();
+            //Empty = true;
         }
 
         time += Time.deltaTime;
@@ -104,12 +105,19 @@ public class LiquidBehavior : MonoBehaviour
         // keep last position
         lastPos = transform.position;
         lastRot = transform.rotation.eulerAngles;
+
+        if (rend.material.GetFloat(FillName) <= -0.1f)
+        {
+            Empty = true;
+            rend.material.SetFloat(FillName, -1);
+        }
     }
 
     public void FillLiquidContainer(float addfill, string name)
     {
         if(Empty)
         {
+            fill = -0.1f;
             ChemistryManager.GetComponent<ChemistryManager>().SetLiquidChem(index, name);
         }
         else
@@ -119,7 +127,7 @@ public class LiquidBehavior : MonoBehaviour
         fill += addfill;
         rend.material.SetFloat(FillName, fill);
         Empty = false;
-        Vol = ((fill + 1f) / 2f);
+        Vol = ((fill + 0.1f) / 0.2f);
         Mass = Chem.Density * Vol;
     }
 
@@ -129,7 +137,7 @@ public class LiquidBehavior : MonoBehaviour
         rend.material.SetColor("Lcol", Chem.LiquidColor);
         rend.material.SetColor("Color_2fefd8e1a99a4d158a13eba51e575822", Chem.SurfaceColor);
         rend.material.SetColor("Color_4beac76ce7c34d629b5cc6460ea6ecdb", Chem.FresnelColor);
-        Vol = ((fill + 1f) / 2f);
+        Vol = ((fill + 0.1f) / 0.2f);
         Mass = Chem.Density * Vol;
     }
 
