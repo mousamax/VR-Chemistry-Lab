@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LiquidBehavior : MonoBehaviour
 {
+    public int index;
+    public GameObject ChemistryManager;
 
     Renderer rend;
     Vector3 lastPos;
@@ -24,13 +27,34 @@ public class LiquidBehavior : MonoBehaviour
 
     public GameObject LiquidSpawner;
 
+    public string Color = "Blue";
+
+    public Chemicals Chem;
+    public bool Filled;
+    public bool Empty;
+    public float Vol;
+    public float Mass;
 
     // Start is called before the first frame update
     void Start()
     {
+        Empty = true;
         rend = GetComponent<Renderer>();
         fill = rend.material.GetFloat(FillName);
+        if(fill > -1)
+        {
+            Empty = false;
+        }
+
+        if (fill >= 1)
+        {
+            Filled = true;
+        }
+        else
+            Filled = false;
         //rend.material.SetFloat("_fill2", fill);
+        //Debug.Log(Vol);
+        //Debug.Log(Mass);
     }
 
     // Update is called once per frame
@@ -39,11 +63,13 @@ public class LiquidBehavior : MonoBehaviour
         if (Vector3.Angle(Vector3.down, LiquidSpawner.transform.forward) <= 90f && fill >= -1f)
         {
             //dropping.Play();
-            Debug.Log("entered");
+            //Debug.Log("entered");
             LiquidSpawner.GetComponent<WaterDropsSpawner>().StartDrop();
             float FillDroped = 0.3f * Time.deltaTime;
             fill -= FillDroped;
             LiquidSpawner.GetComponent<WaterDropsSpawner>().IncreaseFillValue(FillDroped);
+            LiquidSpawner.GetComponent<WaterDropsSpawner>().LiquidColor = Chem.Color;
+            LiquidSpawner.GetComponent<WaterDropsSpawner>().SetChemical(Chem);
             rend.material.SetFloat(FillName, fill);
         }
         else
@@ -80,10 +106,31 @@ public class LiquidBehavior : MonoBehaviour
         lastRot = transform.rotation.eulerAngles;
     }
 
-    public void FillLiquidContainer(float addfill)
+    public void FillLiquidContainer(float addfill, string name)
     {
+        if(Empty)
+        {
+            ChemistryManager.GetComponent<ChemistryManager>().SetLiquidChem(index, name);
+        }
+        else
+        {
+            ChemistryManager.GetComponent<ChemistryManager>().StartChemicalReaction(Chem.Name, name, index);
+        }
         fill += addfill;
         rend.material.SetFloat(FillName, fill);
+        Empty = false;
+        Vol = ((fill + 1f) / 2f);
+        Mass = Chem.Density * Vol;
+    }
+
+    public void AcquireLiquideProb()
+    {
+        //Chem = new Chemicals("Hcl", "Blue", new UnityEngine.Color(0.54f, 0.792f, 0.73f), new UnityEngine.Color(0.651f, 0.980f, 1f), new UnityEngine.Color(0.247f, 0.557f, 0.6784f), 1.18f);
+        rend.material.SetColor("Lcol", Chem.LiquidColor);
+        rend.material.SetColor("Color_2fefd8e1a99a4d158a13eba51e575822", Chem.SurfaceColor);
+        rend.material.SetColor("Color_4beac76ce7c34d629b5cc6460ea6ecdb", Chem.FresnelColor);
+        Vol = ((fill + 1f) / 2f);
+        Mass = Chem.Density * Vol;
     }
 
 }

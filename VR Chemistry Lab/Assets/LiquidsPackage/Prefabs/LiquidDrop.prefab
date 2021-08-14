@@ -118,7 +118,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 43ddbe634a571354e9ffa677fbb62e4c, type: 2}
+  - {fileID: 2100000, guid: 7bafb4773cc0485408274282328bb465, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -179,7 +179,7 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 1, g: 1, b: 1, a: 1}
-      key1: {r: 1, g: 0.67146647, b: 0, a: 0.654902}
+      key1: {r: 1, g: 1, b: 1, a: 0.654902}
       key2: {r: 1, g: 1, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -242,5 +242,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ac6ffce2d070a5449969e30e67c7ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabImage: {fileID: 5816828565757107632, guid: be44544df1939b14a8f255dcb3d5ac1a, type: 3}
-  ParticleSystem: {fileID: 7746120283384577901, guid: 379eb50d05efd9741a521f5c2ba068c4, type: 3}
+  WaterDropOrange: {fileID: 7746120283384577901, guid: 379eb50d05efd9741a521f5c2ba068c4, type: 3}
+  WaterDropRed: {fileID: 6425022843849522509, guid: f9f3ed66ce52ac84b8d30bf418b9bc08, type: 3}
+  WaterDropBlue: {fileID: 5948401128891452147, guid: bac756d11b61ed14fb8cf104ad022c72, type: 3}
+  Color: Orange
+  size: 4
+  RedPrefabs:
+  - {fileID: 4913992354154008542, guid: aefdc0de1f6c0f64f9aeb8d05f7e8cde, type: 3}
+  - {fileID: 4375155901055176996, guid: a3631b18e96b87044a22daf1fb4cd03c, type: 3}
+  - {fileID: 4125692743076646849, guid: e690005785bca414f8b5415300c0c719, type: 3}
+  - {fileID: 7853184300597630334, guid: 5ca8b0ccc90cb474d84df54c602cda0e, type: 3}
+  OrangePrefabs:
+  - {fileID: 2166211521353745805, guid: de777443241a0804aaa66ee3dd4569e2, type: 3}
+  - {fileID: 5540636605383781279, guid: 7b909abe6788b914491b313f8c4ab966, type: 3}
+  - {fileID: 3779384078302368225, guid: c3e239ece6f78c545ade5ce4a3a96b30, type: 3}
+  - {fileID: 3766413390504143697, guid: 066e78827a20cec46a786ceacc3b5611, type: 3}
+  BluePrefabs:
+  - {fileID: 4445154384681444413, guid: ebd8a517e86018b4a8d5ca7c01338c9b, type: 3}
+  - {fileID: 6650779403645892785, guid: 5347ee24aa249fd4badd862eb19f1505, type: 3}
+  - {fileID: 2733902447992181198, guid: 959d7dd6a30ad58449408d8f8981b4f8, type: 3}
+  - {fileID: 6518193490268708354, guid: 808d1461e0166c54d9814a98d6cd9b77, type: 3}

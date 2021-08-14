@@ -21,6 +21,6 @@ public class FluidSpill : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         Instantiate(Prefab, other.transform.position, Quaternion.identity);
-        Debug.Log("anything");
+        //Debug.Log("anything");
     }
 }

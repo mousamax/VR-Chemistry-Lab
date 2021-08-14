@@ -756,7 +756,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Alpha",
     "m_StageCapability": 2,
-    "m_Value": 1.0,
+    "m_Value": 0.0,
     "m_DefaultValue": 1.0,
     "m_Labels": []
 }
@@ -1324,7 +1324,7 @@
     },
     "m_Name": "LiquidColor",
     "m_DefaultReferenceName": "Color_520f5079d40d426cb4eec3dcb262b537",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "Lcol",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
@@ -1640,10 +1640,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -324.7999572753906,
-            "y": 808.800048828125,
-            "width": 207.99998474121095,
-            "height": 302.4000549316406
+            "x": -303.20001220703127,
+            "y": 777.6000366210938,
+            "width": 208.0,
+            "height": 301.5999755859375
         }
     },
     "m_Slots": [
