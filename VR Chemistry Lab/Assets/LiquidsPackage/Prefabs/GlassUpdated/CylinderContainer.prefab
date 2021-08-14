@@ -45,6 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LiquidDropsPrefab: {fileID: 1518415509590709, guid: 17e6ba0ae3d3b60418c22927b42db370, type: 3}
   time: 0.15
+  LiquidColor: 
+  OrangeMat: {fileID: 2100000, guid: 43ddbe634a571354e9ffa677fbb62e4c, type: 2}
+  RedMat: {fileID: 2100000, guid: 4b6ed687f149bb6429eff999c7d97c94, type: 2}
+  BlueMat: {fileID: 2100000, guid: 7bafb4773cc0485408274282328bb465, type: 2}
 --- !u!1 &3396445022629559889
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,11 +160,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b2f991135b8fb4f84098a49d02b608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
+  ChemistryManager: {fileID: 0}
   MaxWobble: 0.03
   WobbleSpeed: 1
   Recovery: 1
   FillName: _fill2
   LiquidSpawner: {fileID: 277714515117643618}
+  Color: Blue
+  Filled: 0
+  Empty: 0
+  Vol: 0
+  Mass: 0
 --- !u!54 &3396445022629559891
 Rigidbody:
   m_ObjectHideFlags: 0
