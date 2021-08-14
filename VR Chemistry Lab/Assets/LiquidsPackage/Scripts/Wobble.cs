@@ -19,8 +19,6 @@ public class Wobble : MonoBehaviour
     float pulse;
     float time = 0.5f;
     float fill = 1f;
-    public string FillName;
-    public ParticleSystem dropping;
 
     // Use this for initialization
     void Start()
@@ -30,24 +28,11 @@ public class Wobble : MonoBehaviour
     }
     private void Update()
     {
-
-        if (Vector3.Angle(Vector3.down, dropping.gameObject.transform.forward) <= 90f && fill >= -1f)
+        if(fill > 0)
         {
-            dropping.Play();
-            fill -= 0.3f * Time.deltaTime;
-            rend.material.SetFloat(FillName, fill);
-            
+            fill -= 0.1f * Time.deltaTime;
+            rend.material.SetFloat("_fill2", fill);
         }
-        else
-        {
-            dropping.Stop();
-        }
-
-        //if (fill > 0)
-        //{
-        //    fill -= 0.1f * Time.deltaTime;
-        //    rend.material.SetFloat("_fill2", fill);
-        //}
 
         time += Time.deltaTime;
         // decrease wobble over time
@@ -75,28 +60,8 @@ public class Wobble : MonoBehaviour
         // keep last position
         lastPos = transform.position;
         lastRot = transform.rotation.eulerAngles;
-
-        
     }
 
-    private void OnParticleCollision(GameObject other)
-    {
-        if (fill <= 1f)
-        {
-            fill += 0.3f * Time.deltaTime;
-            if (fill > 1f)
-                fill = 1f;
-            rend.material.SetFloat(FillName, fill);
-            //ParticleSystem.Particle[] particles = new ParticleSystem.Particle[dropping.particleCount];
-            //int size = dropping.GetParticles(particles);
-            ////for(int i = 0; i < size;i++)
-            ////{
-            ////    particles[i].remainingLifetime = 0;
-            ////}
-            ////dropping.SetParticles(particles, size);
 
-        }
-    }
 
 }
-

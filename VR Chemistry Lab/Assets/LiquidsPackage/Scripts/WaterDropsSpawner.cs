@@ -10,7 +10,13 @@ public class WaterDropsSpawner : MonoBehaviour
     float currtime;
     bool Drop = false;
     float FillValue;
+    public string LiquidColor;
 
+    public Material OrangeMat;
+    public Material RedMat;
+    public Material BlueMat;
+
+    public Chemicals chem;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +30,34 @@ public class WaterDropsSpawner : MonoBehaviour
     {
         if (Drop)
         {
-            Debug.Log("true");
+            //Debug.Log("true");
             currtime += Time.deltaTime;
             if (currtime >= time)
             {
                 
                 GameObject NewWaterDrop = Instantiate(LiquidDropsPrefab, gameObject.transform.position, Quaternion.identity);
                 NewWaterDrop.GetComponent<WaterDropBehavior>().SetFill(FillValue);
+                NewWaterDrop.GetComponent<WaterDropBehavior>().SetColor(LiquidColor);
+                NewWaterDrop.GetComponent<WaterDropBehavior>().setChemicals(chem);
+                // Trying Blue
+                //NewWaterDrop.GetComponent<MeshRenderer>().material = BlueMat;
+                //NewWaterDrop.GetComponent<TrailRenderer>().material = BlueMat;
+
+                if(LiquidColor == "Orange")
+                {
+                    NewWaterDrop.GetComponent<MeshRenderer>().material = OrangeMat;
+                    NewWaterDrop.GetComponent<TrailRenderer>().material = OrangeMat;
+                }
+                else if (LiquidColor == "Red")
+                {
+                    NewWaterDrop.GetComponent<MeshRenderer>().material = RedMat;
+                    NewWaterDrop.GetComponent<TrailRenderer>().material = RedMat;
+                }
+                else if (LiquidColor == "Blue")
+                {
+                    NewWaterDrop.GetComponent<MeshRenderer>().material = BlueMat;
+                    NewWaterDrop.GetComponent<TrailRenderer>().material = BlueMat;
+                }
                 currtime = 0f;
                 FillValue = 0f;
             }
@@ -54,5 +81,10 @@ public class WaterDropsSpawner : MonoBehaviour
     public void IncreaseFillValue(float fill)
     {
         FillValue += fill;
+    }
+
+    public void SetChemical(Chemicals LiquidChem)
+    {
+        chem = LiquidChem;
     }
 }
