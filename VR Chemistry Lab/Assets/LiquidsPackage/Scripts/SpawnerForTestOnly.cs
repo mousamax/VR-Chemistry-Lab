@@ -33,7 +33,7 @@ public class SpawnerForTestOnly : MonoBehaviour
             currtime = 0;
             GameObject newdrop = Instantiate(waterdrops, transform.position, Quaternion.identity);
             newdrop.GetComponent<WaterDropBehavior>().chem = chem[ind];
-            newdrop.GetComponent<WaterDropBehavior>().SetFill(0.15f);
+            newdrop.GetComponent<WaterDropBehavior>().SetFill(0.015f);
         }
         if(count >= 3)
         {
