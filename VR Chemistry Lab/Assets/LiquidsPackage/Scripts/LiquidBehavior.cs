@@ -35,9 +35,12 @@ public class LiquidBehavior : MonoBehaviour
     public float Vol;
     public float Mass;
 
+    bool Exited;
+
     // Start is called before the first frame update
     void Start()
     {
+        Exited = false;
         Empty = true;
         rend = GetComponent<Renderer>();
         fill = rend.material.GetFloat(FillName);
@@ -116,6 +119,12 @@ public class LiquidBehavior : MonoBehaviour
             Empty = true;
             rend.material.SetFloat(FillName, -1);
         }
+
+        if(Exited)
+        {
+            float exFill = UnityEngine.Random.Range(fill - 0.005f, fill + 0.005f);
+            rend.material.SetFloat(FillName, exFill);
+        }
     }
 
     public void FillLiquidContainer(float addfill, string name)
@@ -146,4 +155,14 @@ public class LiquidBehavior : MonoBehaviour
         Mass = Chem.Density * Vol;
     }
 
+
+    public bool DetectSodium()
+    {
+        bool res =  ChemistryManager.GetComponent<ChemistryManager>().StartChemicalReactionOfSodium(Chem.Name, index);
+        if(res)
+        {
+            Exited = true;
+        }
+        return res;
+    }
 }

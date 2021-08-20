@@ -61,4 +61,13 @@ public class ChemistryManager : MonoBehaviour
         }
     }
 
+    public bool StartChemicalReactionOfSodium(string chem, int index)
+    {
+        if(chem == "HydroChloric acid")
+        {
+            return true;
+        }
+        return false;
+    }
+
 }
