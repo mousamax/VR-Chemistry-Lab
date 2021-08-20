@@ -39,5 +39,6 @@ public class SpawnerForTestOnly : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+        //Debug.Log(count);
     }
 }

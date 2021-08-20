@@ -67,6 +67,11 @@ public class LiquidBehavior : MonoBehaviour
             LiquidSpawner.GetComponent<WaterDropsSpawner>().StartDrop();
             float FillDroped = 0.03f * Time.deltaTime;
             fill -= FillDroped;
+            if(fill <= -0.05)
+            {
+                fill = -1;
+                Empty = true;
+            }
             LiquidSpawner.GetComponent<WaterDropsSpawner>().IncreaseFillValue(FillDroped);
             LiquidSpawner.GetComponent<WaterDropsSpawner>().LiquidColor = Chem.Color;
             LiquidSpawner.GetComponent<WaterDropsSpawner>().SetChemical(Chem);
@@ -85,7 +90,7 @@ public class LiquidBehavior : MonoBehaviour
         wobbleAmountToAddZ = Mathf.Lerp(wobbleAmountToAddZ, 0, Time.deltaTime * (Recovery));
 
         // make a sine wave of the decreasing wobble
-        pulse = 2 * Mathf.PI * WobbleSpeed;
+        pulse = 2f * Mathf.PI * WobbleSpeed;
         wobbleAmountX = wobbleAmountToAddX * Mathf.Sin(pulse * time);
         wobbleAmountZ = wobbleAmountToAddZ * Mathf.Sin(pulse * time);
 
@@ -117,7 +122,7 @@ public class LiquidBehavior : MonoBehaviour
     {
         if(Empty)
         {
-            fill = -0.1f;
+            fill = -0.05f - addfill;
             ChemistryManager.GetComponent<ChemistryManager>().SetLiquidChem(index, name);
         }
         else
