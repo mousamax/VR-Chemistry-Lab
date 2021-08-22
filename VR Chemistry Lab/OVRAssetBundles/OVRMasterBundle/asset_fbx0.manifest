@@ -1,0 +1,65 @@
+ManifestFileVersion: 0
+CRC: 2457786747
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5b887f4ef2375aaee503a80307f4f1c7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cefa3633532e44853c9e1006ac52d2ee
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_cap_touch_thumb_mask_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_hold_generic_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_hold_generic_anim.fbx
+- Assets/Room/Models/laboratory/models/exit.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_fist_anim.fbx
+- Assets/Room/Models/laboratory/models/periodic_table.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_cap_touch_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_relax_mid_fist_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_relax_mid_fist_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_cap_touch_index_mask_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_thumbs_up_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_thumbs_up_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_hold_ping_pong_ball_anim.fbx
+- Assets/Room/Models/laboratory/models/chair_2.fbx
+- Assets/Messi/Models/laboratory/models/lab_table_2.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_relax_3qtr_fist_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Models/r_hand_skeletal_lowres.fbx
+- Assets/Room/Models/laboratory/models/lab_cupboard.fbx
+- Assets/Room/Models/laboratory/models/flask.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_cap_touch_thumb_mask_anim.fbx
+- Assets/Room/Models/laboratory/models/lab_small_cupboard.fbx
+- Assets/Room/Models/laboratory/models/extinguisher.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_relax_3qtr_fist_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_cap_touch_index_mask_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_point_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_hold_ping_pong_ball_anim.fbx
+- Assets/Messi/Models/laboratory/models/water_tower.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/r_hand_point_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Animations/l_hand_cap_touch_anim.fbx
+- Assets/Oculus/SampleFramework/Core/CustomHands/Models/l_hand_skeletal_lowres.fbx
+Dependencies:
+- D:/VR Internship/VR-Chemistry-Lab/VR Chemistry Lab/OVRAssetBundles/OVRMasterBundle/asset_mat0

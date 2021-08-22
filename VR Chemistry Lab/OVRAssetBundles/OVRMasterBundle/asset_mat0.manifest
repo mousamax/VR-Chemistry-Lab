@@ -1,0 +1,47 @@
+ManifestFileVersion: 0
+CRC: 3191735333
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9f2be40eca1029e596c2abe7922607ce
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 939e20ecac0e95a3f7c5cfb3e57acb1d
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Procedural_Materials/Materials/Materials/Wall 9.mat
+- Assets/Room/Models/laboratory/models/Materials/solution.mat
+- Assets/Procedural_Materials/Materials/Materials/Wall 11.mat
+- Assets/Room/Models/laboratory/models/Materials/periodic_table.mat
+- Assets/Messi/Models/laboratory/models/Materials/water_tower.mat
+- Assets/Room/Models/laboratory/models/Materials/exit.mat
+- Assets/Room/Models/laboratory/models/Materials/lab_cupboard_glass.mat
+- Assets/Room/Models/laboratory/models/Materials/gray.mat
+- Assets/Room/Models/laboratory/models/Materials/chair_Albedo.mat
+- Assets/Messi/Models/laboratory/models/Materials/lab_table.mat
+- Assets/Room/Models/laboratory/models/Materials/lab_cupboard.mat
+- Assets/Room/Models/laboratory/models/Materials/chair_2.mat
+- Assets/Procedural_Materials/Materials/Materials/Wall 10.mat
+- Assets/PBR Lamps Pack Free/Classic fluorescent lamp/Materials/Classic fluorescent
+  lamp.mat
+- Assets/Procedural_Materials/Materials/Materials/Tiles.mat
+- Assets/PBR Lamps Pack Free/Classic fluorescent lamp/Materials/Lambert_Low_poly.mat
+- Assets/Room/Models/laboratory/models/Materials/extinguisher.mat
+- Assets/Procedural_Materials/Materials/Materials/Wall 12.mat
+- Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat
+- Assets/Room/Models/laboratory/models/Materials/flask.mat
+- Assets/Messi/Models/laboratory/models/Materials/lab_table.001.mat
+- Assets/Oculus/SampleFramework/Core/CustomHands/Materials/Hands_solid.mat
+Dependencies:
+- D:/VR Internship/VR-Chemistry-Lab/VR Chemistry Lab/OVRAssetBundles/OVRMasterBundle/asset_jpg0
+- D:/VR Internship/VR-Chemistry-Lab/VR Chemistry Lab/OVRAssetBundles/OVRMasterBundle/asset_png0
+- D:/VR Internship/VR-Chemistry-Lab/VR Chemistry Lab/OVRAssetBundles/OVRMasterBundle/asset_sbsar0
+- D:/VR Internship/VR-Chemistry-Lab/VR Chemistry Lab/OVRAssetBundles/OVRMasterBundle/asset_shader0
