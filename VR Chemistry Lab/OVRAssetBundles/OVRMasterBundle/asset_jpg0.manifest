@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 171600925
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d558a35dc0072897602cf30db166d2ad
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Room/Models/laboratory/models/textures/exit.jpg
+Dependencies: []
