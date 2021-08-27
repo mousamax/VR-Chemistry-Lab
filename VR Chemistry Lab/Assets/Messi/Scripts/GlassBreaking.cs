@@ -10,7 +10,7 @@ public class GlassBreaking : MonoBehaviour
     public int ZpositionOffset;
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.name == "Ground")
+        if (collision.collider.tag == "Ground")
         {
             q.x = 70;
             q.y = 45;
