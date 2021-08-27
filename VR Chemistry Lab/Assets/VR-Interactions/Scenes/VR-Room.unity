@@ -387,6 +387,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room_V2
       objectReference: {fileID: 0}
+    - target: {fileID: 5946208253679513034, guid: 563ca688d06441e48866fc5cd793604d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946208253679513045, guid: 563ca688d06441e48866fc5cd793604d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 28b50be4383e30f4eb195a085fafeadc, type: 2}
     - target: {fileID: 5946208253822207952, guid: 563ca688d06441e48866fc5cd793604d, type: 3}
       propertyPath: m_UseGravity
       value: 0
