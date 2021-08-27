@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 146771095
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bdfd0bd0422d7721f43b4118986fe683
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/PBR Lamps Pack Free/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_diffuse.png
+- Assets/Messi/Models/laboratory/models/textures/water_table_AlbedoTransparency.png
+- Assets/Messi/Models/laboratory/models/textures/lab_table_AlbedoTransparency.png
+- Assets/Room/Models/laboratory/models/textures/lab_cupboard_AlbedoTransparency.png
+- Assets/Room/Models/laboratory/models/textures/extinguisher_MetallicSmoothness.png
+- Assets/Messi/Models/laboratory/models/textures/water_table_Normal.png
+- Assets/Room/Models/laboratory/models/textures/chair_Normal.png
+- Assets/Room/Models/laboratory/models/textures/periodic_table.png
+- Assets/PBR Lamps Pack Free/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_specular.png
+- Assets/Messi/Models/laboratory/models/textures/lab_table_MetallicSmoothness.png
+- Assets/Room/Models/laboratory/models/textures/extinguisher_Normal.png
+- Assets/Room/Models/laboratory/models/textures/chair_MetallicSmoothness.png
+- Assets/Room/Models/laboratory/models/textures/lab_cupboard_MetallicSmoothness.png
+- Assets/PBR Lamps Pack Free/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_normal.png
+- Assets/Room/Models/laboratory/models/textures/lab_cupboard_Normal.png
+- Assets/PBR Lamps Pack Free/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_emissive.png
+- Assets/Room/Models/laboratory/models/textures/chair_Albedo.png
+- Assets/PBR Lamps Pack Free/Classic fluorescent lamp/Maps (Specular) [Unity]/Classic_fluorescent_lamp_ao.png
+- Assets/Room/Models/laboratory/models/textures/extinguisher_AlbedoTransparency.png
+- Assets/Messi/Models/laboratory/models/textures/water_table_MetallicSmoothness.png
+- Assets/Messi/Models/laboratory/models/textures/water_table_AmbientOcclusion.png
+- Assets/Messi/Models/laboratory/models/textures/lab_table_Normal.png
+Dependencies: []

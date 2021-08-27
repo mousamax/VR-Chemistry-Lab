@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 162273965
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e01ae7786520e5113e3e6c94148888a6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: d8e9af498b2cc0daf8094dfc60b5f4ed
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: -1508842134, guid: 16ea688720e474944a4e808112b45ba4, type: 3}
+- Class: 114
+  Script: {fileID: 82445006, guid: 16ea688720e474944a4e808112b45ba4, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Procedural_Materials/Materials/Tiles.sbsar
+- Assets/Procedural_Materials/Materials/Wall.sbsar
+Dependencies:
+- D:/VR Internship/VR-Chemistry-Lab/VR Chemistry Lab/OVRAssetBundles/OVRMasterBundle/asset_shader0

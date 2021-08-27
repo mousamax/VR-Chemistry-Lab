@@ -1,0 +1,63 @@
+ManifestFileVersion: 0
+CRC: 71252118
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d6e1aba2feb50251813582bd37b7a933
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b8e86ac853ba613b0fe711abe13a25c7
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: ad074644ff568a14187a3690cfbd7534, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b3d881e962d099f4a8eb492ef7e9a8c0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 70c2f484f132c044097f03d65cac3b24, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Oculus/VR/Resources/Unlit Transparent Color.shader
+- Assets/MenuBoard/Resources/Textures/board_B.jpg
+- Assets/MenuBoard/Resources/Materials/board_B.mat
+- Assets/Oculus/VR/Resources/OVRMRUnlitTransparent.shader
+- Assets/MenuBoard/Resources/Textures/board_A.jpg
+- Assets/Resources/OculusPlatformSettings.asset
+- Assets/MenuBoard/Resources/Textures/board_C.jpg
+- Assets/Oculus/VR/Resources/OVRMRUnlit.shader
+- Assets/Resources/OVRPlatformToolSettings.asset
+- Assets/MenuBoard/Resources/Materials/board_C.mat
+- Assets/Oculus/VR/Resources/OVRMRCameraFrame.shader
+- Assets/Oculus/VR/Resources/OVRMRCameraFrameLit.shader
+- Assets/MenuBoard/Resources/Models/menuboard.fbx
+- Assets/Oculus/VR/Resources/Cubemap Blit.shader
+- Assets/Oculus/VR/Resources/Underlay Impostor.shader
+- Assets/MenuBoard/Resources/Materials/board_A.mat
+- Assets/Resources/ONSPSettings.asset
+- Assets/Oculus/VR/Resources/Underlay Transparent Occluder.shader
+- Assets/MenuBoard/Resources/Materials/wood.mat
+- Assets/MenuBoard/Resources/Textures/wood.jpg
+- Assets/Oculus/VR/Resources/Texture2D Blit.shader
+- Assets/Resources/OVRBuildConfig.asset
+- Assets/Resources/OvrAvatarSettings.asset
+Dependencies:
+- D:/VR Internship/VR-Chemistry-Lab/VR Chemistry Lab/OVRAssetBundles/OVRMasterBundle/asset_mat0
+- D:/VR Internship/VR-Chemistry-Lab/VR Chemistry Lab/OVRAssetBundles/OVRMasterBundle/asset_shader0
