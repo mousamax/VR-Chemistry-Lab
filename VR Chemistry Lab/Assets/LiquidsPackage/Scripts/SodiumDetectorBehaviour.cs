@@ -23,7 +23,9 @@ public class SodiumDetectorBehaviour : MonoBehaviour
     {
         if(LiquidContainer.GetComponent<LiquidBehavior>().DetectSodium())
         {
-            Instantiate(steam, transform.position, Quaternion.EulerAngles(new Vector3(90f,0,0)));
+            GameObject ThisSteam = Instantiate(steam, transform.position, Quaternion.EulerAngles(new Vector3(90f,0,0)));
+            ThisSteam.transform.parent = gameObject.transform;
+            ThisSteam.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             Destroy(collision.gameObject);
         }
     }
