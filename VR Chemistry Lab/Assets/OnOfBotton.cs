@@ -25,8 +25,8 @@ public class OnOfBotton : MonoBehaviour
         startPosition = transform.localPosition;
         joint = GetComponent<ConfigurableJoint>();
 
-        startFireScale = new Vector3(0.03f, 0.01f, 0.03f);
-        startFirePosition = new Vector3(firePS.transform.localPosition.x, firePS.transform.localPosition.y, 12.4f);
+        startFireScale = new Vector3(0.15f, 0.15f, 0.05f);
+        startFirePosition = new Vector3(firePS.transform.localPosition.x, firePS.transform.localPosition.y, 12.0f);
         startAudioVolume = 1.00f;
         firePS.transform.localPosition = startFirePosition;
         firePS.transform.localScale = startFireScale;
@@ -51,7 +51,7 @@ public class OnOfBotton : MonoBehaviour
         isPressed = true;
         onPressed.Invoke();
         Debug.Log("Pressed");
-        if (clicked)
+        if (!clicked)
         {
             OnOff.color = new Color(0x00, 0xff, 0xff);
             firePS.Stop();
