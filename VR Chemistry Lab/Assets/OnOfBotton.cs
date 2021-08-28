@@ -9,8 +9,8 @@ public class OnOfBotton : MonoBehaviour
     [SerializeField] private Material OnOff;
     [SerializeField] private AudioSource fireAS;
 
-    private bool isPressed;
-    private bool clicked;
+    private bool isPressed=false;
+    private bool clicked= false;
     float startAudioVolume;
     private Vector3 startPosition;
     private Vector3 startFireScale;
