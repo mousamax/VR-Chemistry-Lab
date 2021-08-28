@@ -129,6 +129,7 @@ public class LiquidBehavior : MonoBehaviour
             rend.material.SetFloat(FillName, exFill);
             if(TimeOfExitation >= 3)
             {
+                TimeOfExitation = 0;
                 Exited = false;
             }
         }

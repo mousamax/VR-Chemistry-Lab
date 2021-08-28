@@ -8,11 +8,16 @@ public class ChemistryManager : MonoBehaviour
 
     public GameObject[] LiquidContainers;
 
+    public GameObject Canvas;
+
     public Chemicals HCL;
     public Chemicals FeCL3;
     public Chemicals KSCN;
     public Chemicals FeSCN3;
- 
+
+    public bool Exp1;
+    public bool Exp2;
+    public bool Exp3;
 
     void Start()
     {
@@ -37,11 +42,19 @@ public class ChemistryManager : MonoBehaviour
         }
         else if (name == "Potassium Thiocyanate")
         {
+            if (Exp1)
+            {
+                Canvas.GetComponent<Experiment1Instructions>().instruction2Done = true;
+            }
             LiquidContainers[index].GetComponent<LiquidBehavior>().Chem = KSCN;
             LiquidContainers[index].GetComponent<LiquidBehavior>().AcquireLiquideProb();
         }
         else if (name == "Ferric Chloride")
         {
+            if(Exp1)
+            {
+                Canvas.GetComponent<Experiment1Instructions>().instruction1Done = true;
+            }
             LiquidContainers[index].GetComponent<LiquidBehavior>().Chem = FeCL3;
             LiquidContainers[index].GetComponent<LiquidBehavior>().AcquireLiquideProb();
         }
@@ -56,6 +69,10 @@ public class ChemistryManager : MonoBehaviour
     {
         if((chem1 == "Potassium Thiocyanate" && chem2== "Ferric Chloride") || (chem1 == "Ferric Chloride" && chem2 == "Potassium Thiocyanate"))
         {
+            if (Exp1)
+            {
+                Canvas.GetComponent<Experiment1Instructions>().instruction3Done = true;
+            }
             LiquidContainers[index].GetComponent<LiquidBehavior>().Chem = FeSCN3;
             LiquidContainers[index].GetComponent<LiquidBehavior>().AcquireLiquideProb();
         }
@@ -70,4 +87,8 @@ public class ChemistryManager : MonoBehaviour
         return false;
     }
 
+    public void setExp1()
+    {
+        Exp1 = true;
+    }
 }
