@@ -62,6 +62,7 @@ GameObject:
   - component: {fileID: 3115987370378535238}
   - component: {fileID: 3115987370378535242}
   - component: {fileID: 3115987370378535237}
+  - component: {fileID: 287256796403168236}
   m_Layer: 9
   m_Name: CylinderContainer
   m_TagString: Untagged
@@ -164,6 +165,23 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &287256796403168236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3115987370378535236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1 &3115987370608031074
 GameObject:
   m_ObjectHideFlags: 0

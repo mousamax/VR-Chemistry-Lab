@@ -49,6 +49,39 @@ MonoBehaviour:
   OrangeMat: {fileID: 2100000, guid: 43ddbe634a571354e9ffa677fbb62e4c, type: 2}
   RedMat: {fileID: 2100000, guid: 4b6ed687f149bb6429eff999c7d97c94, type: 2}
   BlueMat: {fileID: 2100000, guid: 7bafb4773cc0485408274282328bb465, type: 2}
+--- !u!114 &477107757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5670675276603464053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a47e498c23def6488f50f3a9e0dcc59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  brokenGlass: {fileID: 3661342064399034484, guid: e4d68cb7b4ce019449e723d4fb8cba2a, type: 3}
+  XpositionOffset: 0
+  YpositionOffset: 0
+  ZpositionOffset: 0
+--- !u!114 &405027088915466809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5670675276603464053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!114 &1484861561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,22 +145,6 @@ MonoBehaviour:
   MaxWobble: 0.01
   WobbleSpeed: 1
   Recovery: 1
---- !u!114 &477107757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5670675276603464053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a47e498c23def6488f50f3a9e0dcc59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brokenGlass: {fileID: 3661342064399034484, guid: e4d68cb7b4ce019449e723d4fb8cba2a, type: 3}
-  XpositionOffset: 0
-  YpositionOffset: 0
-  ZpositionOffset: 0
 --- !u!1001 &2204699553708988078
 PrefabInstance:
   m_ObjectHideFlags: 0
