@@ -133,6 +133,9 @@ public class LiquidBehavior : MonoBehaviour
                 Exited = false;
             }
         }
+
+        transform.parent.gameObject.GetComponent<Rigidbody>().mass = Mass * 100;
+
     }
 
     public void FillLiquidContainer(float addfill, string name)
@@ -147,10 +150,15 @@ public class LiquidBehavior : MonoBehaviour
             ChemistryManager.GetComponent<ChemistryManager>().StartChemicalReaction(Chem.Name, name, index);
         }
         fill += addfill;
+        if(fill >= 0.05f)
+        {
+            fill = 0.05f;
+        }
         rend.material.SetFloat(FillName, fill);
         Empty = false;
-        Vol = ((fill + 0.1f) / 0.2f);
+        Vol = ((fill + 0.05f) / 0.1f);
         Mass = Chem.Density * Vol;
+        //transform.parent.gameObject.GetComponent<Rigidbody>().mass = Mass/2f;
     }
 
     public void AcquireLiquideProb()
