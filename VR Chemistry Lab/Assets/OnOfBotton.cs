@@ -3,21 +3,25 @@ using UnityEngine.Events;
 
 public class OnOfBotton : MonoBehaviour
 {
-    [SerializeField] private float threshold = 0.1f;
-    [SerializeField] private float deadZone = 0.025f;
+    [SerializeField] private float threshold = 0.5f;
+    [SerializeField] private float deadZone = 0.05f;
     [SerializeField] private ParticleSystem firePS;
     [SerializeField] private Material OnOff;
     [SerializeField] private AudioSource fireAS;
 
-    private bool isPressed=false;
-    private bool clicked= false;
+
+    public GameObject FireCubeMask;
+    //public float anything;
+    private bool isPressed;
+    private bool clicked;
     float startAudioVolume;
     private Vector3 startPosition;
     private Vector3 startFireScale;
     private Vector3 startFirePosition;
     private ConfigurableJoint joint;
     public UnityEvent onPressed, onReleased;
- 
+
+    
     
     // Start is called before the first frame update
     void Start()
@@ -25,8 +29,8 @@ public class OnOfBotton : MonoBehaviour
         startPosition = transform.localPosition;
         joint = GetComponent<ConfigurableJoint>();
 
-        startFireScale = new Vector3(0.15f, 0.15f, 0.05f);
-        startFirePosition = new Vector3(firePS.transform.localPosition.x, firePS.transform.localPosition.y, 12.0f);
+        startFireScale = new Vector3(0.15f, 0.15f, 0.06f);
+        startFirePosition = new Vector3(firePS.transform.localPosition.x, firePS.transform.localPosition.y, 12.4f);
         startAudioVolume = 1.00f;
         firePS.transform.localPosition = startFirePosition;
         firePS.transform.localScale = startFireScale;
@@ -35,6 +39,7 @@ public class OnOfBotton : MonoBehaviour
         firePS.Stop();
         fireAS.Stop();
         clicked = false;
+        isPressed = false;
     }
 
     // Update is called once per frame
@@ -42,27 +47,29 @@ public class OnOfBotton : MonoBehaviour
     {
         if (!isPressed && GetValue() + threshold >= 1)
             Pressed();
-        if (isPressed && GetValue() - threshold <= 0)
+        else if (isPressed && GetValue() - threshold <= 0)
             Released();
     }
 
     private void Pressed()
     {
         isPressed = true;
-        onPressed.Invoke();
+        //onPressed.Invoke();
         Debug.Log("Pressed");
-        if (!clicked)
+        if (clicked)
         {
             OnOff.color = new Color(0x00, 0xff, 0xff);
             firePS.Stop();
             fireAS.Stop();
             clicked = false;
+            FireCubeMask.gameObject.SetActive(false);
         }
         else 
         {
             OnOff.color = new Color(0xff, 0x00, 0x00);
             firePS.Play();
             fireAS.Play();
+            FireCubeMask.gameObject.SetActive(true);
             clicked = true;
         }
     }

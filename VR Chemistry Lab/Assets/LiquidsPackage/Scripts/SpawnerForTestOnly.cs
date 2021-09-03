@@ -16,11 +16,12 @@ public class SpawnerForTestOnly : MonoBehaviour
     void Start()
     {
         count = 0;
-        chem = new Chemicals[3];
+        chem = new Chemicals[4];
 
         chem[0] = new Chemicals("Potassium Thiocyanate", "Blue", new UnityEngine.Color(0.54f, 0.792f, 0.73f), new UnityEngine.Color(0.651f, 0.980f, 1f), new UnityEngine.Color(0.247f, 0.557f, 0.6784f), 1.886f);
         chem[1] = new Chemicals("Ferric Chloride", "Orange", new UnityEngine.Color(0.9803f, 0.894f, 0.44705f), new UnityEngine.Color(1, 0.843f, 0), new UnityEngine.Color(0.7725f, 0.2588f, 0), 2.9f);
         chem[2] = new Chemicals("Ferric thiocyanate", "Red", new UnityEngine.Color(0.54117f, 0.0117f, 0.0117f), new UnityEngine.Color(0.4f, 0f, 0f), new UnityEngine.Color(1f, 0.0117f, 0), 0.9487f);
+        chem[3] = new Chemicals("HydroChloric acid", "Blue", new UnityEngine.Color(0.54f, 0.792f, 0.73f), new UnityEngine.Color(0.651f, 0.980f, 1f), new UnityEngine.Color(0.247f, 0.557f, 0.6784f), 1.18f);
     }
 
     // Update is called once per frame

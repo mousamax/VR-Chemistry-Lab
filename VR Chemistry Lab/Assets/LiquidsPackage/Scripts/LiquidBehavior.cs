@@ -34,10 +34,15 @@ public class LiquidBehavior : MonoBehaviour
     public bool Empty;
     public float Vol;
     public float Mass;
+    float TimeOfExitation;
+
+    bool Exited;
 
     // Start is called before the first frame update
     void Start()
     {
+        TimeOfExitation = 0;
+        Exited = false;
         Empty = true;
         rend = GetComponent<Renderer>();
         fill = rend.material.GetFloat(FillName);
@@ -116,6 +121,21 @@ public class LiquidBehavior : MonoBehaviour
             Empty = true;
             rend.material.SetFloat(FillName, -1);
         }
+
+        if(Exited)
+        {
+            TimeOfExitation += Time.deltaTime;
+            float exFill = UnityEngine.Random.Range(fill - 0.005f, fill + 0.005f);
+            rend.material.SetFloat(FillName, exFill);
+            if(TimeOfExitation >= 3)
+            {
+                TimeOfExitation = 0;
+                Exited = false;
+            }
+        }
+
+        transform.parent.gameObject.GetComponent<Rigidbody>().mass = Mass * 100;
+
     }
 
     public void FillLiquidContainer(float addfill, string name)
@@ -130,10 +150,15 @@ public class LiquidBehavior : MonoBehaviour
             ChemistryManager.GetComponent<ChemistryManager>().StartChemicalReaction(Chem.Name, name, index);
         }
         fill += addfill;
+        if(fill >= 0.05f)
+        {
+            fill = 0.05f;
+        }
         rend.material.SetFloat(FillName, fill);
         Empty = false;
-        Vol = ((fill + 0.1f) / 0.2f);
+        Vol = ((fill + 0.05f) / 0.1f);
         Mass = Chem.Density * Vol;
+        //transform.parent.gameObject.GetComponent<Rigidbody>().mass = Mass/2f;
     }
 
     public void AcquireLiquideProb()
@@ -146,4 +171,16 @@ public class LiquidBehavior : MonoBehaviour
         Mass = Chem.Density * Vol;
     }
 
+
+    public bool DetectSodium()
+    {
+        if (Empty)
+            return false;
+        bool res =  ChemistryManager.GetComponent<ChemistryManager>().StartChemicalReactionOfSodium(Chem.Name, index);
+        if(res)
+        {
+            Exited = true;
+        }
+        return res;
+    }
 }
