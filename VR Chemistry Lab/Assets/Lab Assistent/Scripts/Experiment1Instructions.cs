@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Experiment1Instructions : MonoBehaviour
 {
+    public static Experiment1Instructions instance;
+
     public Text changingText;
     public Button btn1;
     public Button btn2;
@@ -19,6 +21,8 @@ public class Experiment1Instructions : MonoBehaviour
     [SerializeField] AudioClip instruction3Sound;
     [SerializeField] AudioClip finishingExperiment;
     float delay = 1f;
+    
+    public float startOverDelay = 5f;
     public bool instruction1Done = false;
     public bool instruction2Done = false;
     public bool instruction3Done = false;
@@ -96,6 +100,17 @@ public class Experiment1Instructions : MonoBehaviour
         //instruction3Done = true;
         audioSource.PlayOneShot(instruction3Sound);
     }
+    public void StartOver()
+    {
+        wellDone.gameObject.SetActive(false);
+        dixter.gameObject.SetActive(false);
+        btn1.gameObject.SetActive(true);
+        btn2.gameObject.SetActive(true);
+        btn3.gameObject.SetActive(true);
+        changingText.gameObject.SetActive(true);
+        changingText.text = "Choose from the following experiments:";
+        beakers.gameObject.SetActive(true);
+    }
     public void Finish()
     {
         changingText.gameObject.SetActive(false);
@@ -104,6 +119,7 @@ public class Experiment1Instructions : MonoBehaviour
         dixter.gameObject.SetActive(true);
         audioSource.Stop();
         audioSource.PlayOneShot(finishingExperiment);
+        Invoke("StartOver", startOverDelay);
     }
 
 }
