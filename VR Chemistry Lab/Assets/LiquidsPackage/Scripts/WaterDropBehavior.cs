@@ -44,7 +44,7 @@ public class WaterDropBehavior : MonoBehaviour
         }
         else if(collision.gameObject.tag == "Land")
         {
-            Vector3 pos = new Vector3(transform.position.x, collision.gameObject.transform.position.y + 0.1f, transform.position.z);
+            Vector3 pos = new Vector3(transform.position.x, transform.position.y + 0.01f, transform.position.z);
             if (Color == "Orange")
             {
                 //int i = Random.Range(0, size);
