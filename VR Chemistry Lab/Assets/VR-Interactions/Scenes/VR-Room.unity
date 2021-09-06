@@ -1368,6 +1368,10 @@ PrefabInstance:
       propertyPath: ChemistryManager
       value: 
       objectReference: {fileID: 489587998}
+    - target: {fileID: 8014665650222212859, guid: ea20b3ad2c9833a48a46db1a95177cb5, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8922076163928729973, guid: ea20b3ad2c9833a48a46db1a95177cb5, type: 3}
       propertyPath: m_Name
       value: lab_beaker_b (8)
@@ -3624,6 +3628,10 @@ PrefabInstance:
       propertyPath: ChemistryManager
       value: 
       objectReference: {fileID: 489587998}
+    - target: {fileID: 8014665650222212859, guid: ea20b3ad2c9833a48a46db1a95177cb5, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8922076163928729973, guid: ea20b3ad2c9833a48a46db1a95177cb5, type: 3}
       propertyPath: m_Name
       value: lab_beaker_b (9)
@@ -7045,6 +7053,10 @@ PrefabInstance:
       propertyPath: ChemistryManager
       value: 
       objectReference: {fileID: 489587998}
+    - target: {fileID: 8014665650222212859, guid: ea20b3ad2c9833a48a46db1a95177cb5, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8922076163928729973, guid: ea20b3ad2c9833a48a46db1a95177cb5, type: 3}
       propertyPath: m_Name
       value: lab_beaker_b (7)
@@ -7584,6 +7596,10 @@ PrefabInstance:
       propertyPath: ChemistryManager
       value: 
       objectReference: {fileID: 489587998}
+    - target: {fileID: 4875420757700876379, guid: 451aab9564b34954ea8d6cd52502e95e, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 451aab9564b34954ea8d6cd52502e95e, type: 3}
 --- !u!1001 &1781306350
@@ -7965,6 +7981,18 @@ PrefabInstance:
     - target: {fileID: 5947844054591264388, guid: 563ca688d06441e48866fc5cd793604d, type: 3}
       propertyPath: m_LocalScale.z
       value: 3.701585
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947844054591264388, guid: 563ca688d06441e48866fc5cd793604d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947844054591264388, guid: 563ca688d06441e48866fc5cd793604d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947844054591264388, guid: 563ca688d06441e48866fc5cd793604d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 22.79
       objectReference: {fileID: 0}
     - target: {fileID: 5950941375570580246, guid: 563ca688d06441e48866fc5cd793604d, type: 3}
       propertyPath: m_LocalPosition.x
