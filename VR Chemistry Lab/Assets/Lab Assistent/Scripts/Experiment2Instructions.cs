@@ -96,6 +96,17 @@ public class Experiment2Instructions : MonoBehaviour
         //instruction3Done = true;
         audioSource.PlayOneShot(instruction3Sound);
     }
+    void StartOver()
+    {
+        wellDone.gameObject.SetActive(false);
+        dixter.gameObject.SetActive(false);
+        btn1.gameObject.SetActive(true);
+        btn2.gameObject.SetActive(true);
+        btn3.gameObject.SetActive(true);
+        changingText.gameObject.SetActive(true);
+        changingText.text = "Choose from the following experiments:";
+        beakers.gameObject.SetActive(true);
+    }
     public void Finish()
     {
         changingText.gameObject.SetActive(false);
@@ -104,6 +115,7 @@ public class Experiment2Instructions : MonoBehaviour
         dixter.gameObject.SetActive(true);
         audioSource.Stop();
         audioSource.PlayOneShot(finishingExperiment);
+        Invoke("StartOver", Experiment1Instructions.instance.startOverDelay);
     }
 
 }

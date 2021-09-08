@@ -25,7 +25,8 @@ public class LiquidBehavior : MonoBehaviour
     float fill;
     public string FillName;
 
-    public GameObject LiquidSpawner;
+    public GameObject[] LiquidSpawner;
+    public int length;
 
     public string Color = "Blue";
 
@@ -65,11 +66,19 @@ public class LiquidBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Angle(Vector3.down, LiquidSpawner.transform.forward) <= 90f && fill >= -0.1f && !Empty)
+        GameObject selectedSpawner = LiquidSpawner[0];
+        for(int i = 1; i < length;i++)
+        {
+            if(selectedSpawner.transform.position.y > LiquidSpawner[i].transform.position.y)
+            {
+                selectedSpawner = LiquidSpawner[i];
+            }
+        }
+        if (Vector3.Angle(Vector3.down, selectedSpawner.transform.forward) <= 90f && fill >= -0.1f && !Empty)
         {
             //dropping.Play();
             //Debug.Log("entered");
-            LiquidSpawner.GetComponent<WaterDropsSpawner>().StartDrop();
+            selectedSpawner.GetComponent<WaterDropsSpawner>().StartDrop();
             float FillDroped = 0.03f * Time.deltaTime;
             fill -= FillDroped;
             if(fill <= -0.05)
@@ -77,16 +86,20 @@ public class LiquidBehavior : MonoBehaviour
                 fill = -1;
                 Empty = true;
             }
-            LiquidSpawner.GetComponent<WaterDropsSpawner>().IncreaseFillValue(FillDroped);
-            LiquidSpawner.GetComponent<WaterDropsSpawner>().LiquidColor = Chem.Color;
-            LiquidSpawner.GetComponent<WaterDropsSpawner>().SetChemical(Chem);
+            selectedSpawner.GetComponent<WaterDropsSpawner>().IncreaseFillValue(FillDroped);
+            selectedSpawner.GetComponent<WaterDropsSpawner>().LiquidColor = Chem.Color;
+            selectedSpawner.GetComponent<WaterDropsSpawner>().SetChemical(Chem);
             rend.material.SetFloat(FillName, fill);
         }
         else
         {
             //dropping.Stop();
-            LiquidSpawner.GetComponent<WaterDropsSpawner>().EndDrop();
+            selectedSpawner.GetComponent<WaterDropsSpawner>().EndDrop();
             //Empty = true;
+            for (int i = 1; i < length; i++)
+            {
+                LiquidSpawner[i].GetComponent<WaterDropsSpawner>().EndDrop();
+            }
         }
 
         time += Time.deltaTime;

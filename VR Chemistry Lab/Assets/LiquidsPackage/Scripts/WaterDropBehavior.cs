@@ -42,9 +42,9 @@ public class WaterDropBehavior : MonoBehaviour
         {
             collision.gameObject.GetComponent<LiquidBehavior>().FillLiquidContainer(FillValue,chem.Name);
         }
-        else if(collision.gameObject.tag == "Land")
+        else if(collision.gameObject.tag == "Land" || collision.gameObject.tag == "Ground")
         {
-            Vector3 pos = new Vector3(transform.position.x, collision.gameObject.transform.position.y + 0.1f, transform.position.z);
+            Vector3 pos = new Vector3(transform.position.x, transform.position.y + 0.00001f, transform.position.z);
             if (Color == "Orange")
             {
                 //int i = Random.Range(0, size);

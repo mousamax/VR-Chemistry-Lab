@@ -33,9 +33,14 @@ public class RawLiquidSource : MonoBehaviour
     float time = 0.5f;
     bool Empty;
 
+    bool StartFilling;
+    float fillTime = 3f;
+    float tofillTime = 1f;
+    float initialfill;
     // Start is called before the first frame update
     void Start()
     {
+        StartFilling = false;
         Empty = false;
         chem = new Chemicals[4];
 
@@ -51,36 +56,66 @@ public class RawLiquidSource : MonoBehaviour
         rend.material.SetColor("Color_4beac76ce7c34d629b5cc6460ea6ecdb", chem[ind].FresnelColor);
         Vol = ((fill + 0.1f) / 0.2f);
         Mass = chem[ind].Density * Vol;
+        initialfill = fill;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Vector3.Angle(Vector3.down, LiquidDropsGenerator.transform.forward) <= 90f && fill >= -0.1f && !Empty)
+        if (Vector3.Angle(Vector3.down, LiquidDropsGenerator.transform.forward) <= 90f && fill >= -0.2f && !Empty)
         {
             //dropping.Play();
-            //Debug.Log("entered");
+            Debug.Log("entered");
             LiquidDropsGenerator.GetComponent<WaterDropsSpawner>().StartDrop();
             float FillDroped = 0.3f * Time.deltaTime;
             fill -= FillDroped;
+            //Debug.Log("6");
             if (fill <= -0.131f)
             {
+                Debug.Log("5");
                 fill = -1;
                 Empty = true;
             }
-            LiquidDropsGenerator.GetComponent<WaterDropsSpawner>().IncreaseFillValue(FillDroped);
+            LiquidDropsGenerator.GetComponent<WaterDropsSpawner>().IncreaseFillValue(FillDroped/10f);
             LiquidDropsGenerator.GetComponent<WaterDropsSpawner>().LiquidColor = chem[ind].Color;
             LiquidDropsGenerator.GetComponent<WaterDropsSpawner>().SetChemical(chem[ind]);
             rend.material.SetFloat(FillName, fill);
+            fillTime = 3f;
         }
         else
         {
+            if(Empty)
+            {
+                //Debug.Log("1");
+                fillTime -= Time.deltaTime;
+            }
+            if(fillTime <= 0)
+            {
+                Empty = false;
+                Debug.Log("2");
+                if (fill < initialfill)
+                {
+                    //Debug.Log("3");
+                    if (fill == -1)
+                    {
+                        //Debug.Log("4");
+                        fill = -0.131f;
+                    }
+                    fill += 0.1f * Time.deltaTime * tofillTime;
+                    if(fill > initialfill)
+                    {
+                        fill = initialfill;
+                    }
+                }
+            }
             //dropping.Stop();
             LiquidDropsGenerator.GetComponent<WaterDropsSpawner>().EndDrop();
             //Empty = true;
         }
+        rend.material.SetFloat(FillName, fill);
 
+        //Debug.Log(fill);
         fill = rend.material.GetFloat(FillName);
         Vol = ((fill + 0.1f) / 0.2f);
         Mass = chem[ind].Density * Vol;

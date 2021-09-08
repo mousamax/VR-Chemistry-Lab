@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3042379385458192478}
   - component: {fileID: 1078538347242216619}
   - component: {fileID: 572753862373695573}
+  - component: {fileID: -8298340223015881125}
   m_Layer: 0
   m_Name: WaterDroppedParticleRed
   m_TagString: Untagged
@@ -4818,3 +4819,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 1
+--- !u!114 &-8298340223015881125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6425022843849522509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036f721a833e9f94a9917b52e2159a38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

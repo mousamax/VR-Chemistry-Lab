@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 2159405242259795471}
   - component: {fileID: 7447576894915007242}
   - component: {fileID: 7164830673579387178}
+  - component: {fileID: -1462560886457086906}
   m_Layer: 5
   m_Name: Red3
   m_TagString: Untagged
@@ -175,3 +176,15 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &-1462560886457086906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4125692743076646849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036f721a833e9f94a9917b52e2159a38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
