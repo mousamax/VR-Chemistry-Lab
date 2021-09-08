@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7517233127208667729}
   - component: {fileID: 1368592539728246612}
   - component: {fileID: 1642612761631722868}
+  - component: {fileID: 7059134351315754688}
   m_Layer: 5
   m_Name: Orange2
   m_TagString: Untagged
@@ -100,6 +101,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7059134351315754688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5540636605383781279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036f721a833e9f94a9917b52e2159a38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8470486253909160904
 GameObject:
   m_ObjectHideFlags: 0

@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 1221079222944615071}
   - component: {fileID: 7664705517321418650}
   - component: {fileID: 7956467720172473786}
+  - component: {fileID: -68957696276031093}
   m_Layer: 5
   m_Name: Orange4
   m_TagString: Untagged
@@ -175,3 +176,15 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &-68957696276031093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766413390504143697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036f721a833e9f94a9917b52e2159a38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
