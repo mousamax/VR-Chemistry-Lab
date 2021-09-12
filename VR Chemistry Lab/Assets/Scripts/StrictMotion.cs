@@ -8,11 +8,6 @@ public class StrictMotion : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         
-        rb.constraints = RigidbodyConstraints.FreezePositionX;
-        rb.constraints = RigidbodyConstraints.FreezePositionZ;
-
-        rb.constraints = RigidbodyConstraints.FreezeRotationX;
-        rb.constraints = RigidbodyConstraints.FreezeRotationY;
-        rb.constraints = RigidbodyConstraints.FreezeRotationZ;
+        rb.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionX;
     }
 }
