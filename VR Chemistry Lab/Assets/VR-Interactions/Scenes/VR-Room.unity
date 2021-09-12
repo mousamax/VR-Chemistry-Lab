@@ -1669,7 +1669,7 @@ Transform:
   - {fileID: 345927684}
   - {fileID: 53896669}
   m_Father: {fileID: 868174057}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &340534966
 Rigidbody:
@@ -2467,7 +2467,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -3050,7 +3050,7 @@ Transform:
   m_LocalScale: {x: 2.4999998, y: 2.4999998, z: 2.4999998}
   m_Children: []
   m_Father: {fileID: 868174057}
-  m_RootOrder: 36
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &518170130
 MonoBehaviour:
@@ -4034,7 +4034,7 @@ Transform:
   - {fileID: 1167617188}
   - {fileID: 291447222}
   m_Father: {fileID: 868174057}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &791855802 stripped
 Transform:
@@ -4704,7 +4704,7 @@ Transform:
   m_Children:
   - {fileID: 1574145133}
   m_Father: {fileID: 868174057}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1069364551
 Rigidbody:
@@ -5083,7 +5083,7 @@ Transform:
   - {fileID: 954328590}
   - {fileID: 1891884971}
   m_Father: {fileID: 868174057}
-  m_RootOrder: 41
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1257620264
 GameObject:
@@ -6640,7 +6640,7 @@ Transform:
   m_LocalScale: {x: 2.4999998, y: 2.4999998, z: 2.4999998}
   m_Children: []
   m_Father: {fileID: 868174057}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1523009512
 MonoBehaviour:
