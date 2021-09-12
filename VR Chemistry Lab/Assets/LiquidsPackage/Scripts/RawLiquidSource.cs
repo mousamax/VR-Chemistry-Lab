@@ -66,14 +66,14 @@ public class RawLiquidSource : MonoBehaviour
         if (Vector3.Angle(Vector3.down, LiquidDropsGenerator.transform.forward) <= 90f && fill >= -0.2f && !Empty)
         {
             //dropping.Play();
-            Debug.Log("entered");
+            //Debug.Log("entered");
             LiquidDropsGenerator.GetComponent<WaterDropsSpawner>().StartDrop();
             float FillDroped = 0.3f * Time.deltaTime;
             fill -= FillDroped;
             //Debug.Log("6");
             if (fill <= -0.131f)
             {
-                Debug.Log("5");
+                //Debug.Log("5");
                 fill = -1;
                 Empty = true;
             }
@@ -93,7 +93,7 @@ public class RawLiquidSource : MonoBehaviour
             if(fillTime <= 0)
             {
                 Empty = false;
-                Debug.Log("2");
+                //Debug.Log("2");
                 if (fill < initialfill)
                 {
                     //Debug.Log("3");

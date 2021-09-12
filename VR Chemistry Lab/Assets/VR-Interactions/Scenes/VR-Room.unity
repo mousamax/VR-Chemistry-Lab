@@ -1372,6 +1372,26 @@ PrefabInstance:
       propertyPath: ChemistryManager
       value: 
       objectReference: {fileID: 489587998}
+    - target: {fileID: 8014665650222212858, guid: ea20b3ad2c9833a48a46db1a95177cb5, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7385902
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014665650222212858, guid: ea20b3ad2c9833a48a46db1a95177cb5, type: 3}
+      propertyPath: m_Size.z
+      value: 0.75073546
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014665650222212858, guid: ea20b3ad2c9833a48a46db1a95177cb5, type: 3}
+      propertyPath: m_Center.x
+      value: 0.014519715
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014665650222212858, guid: ea20b3ad2c9833a48a46db1a95177cb5, type: 3}
+      propertyPath: m_Center.y
+      value: 0.49999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 8014665650222212858, guid: ea20b3ad2c9833a48a46db1a95177cb5, type: 3}
+      propertyPath: m_Center.z
+      value: 0.0047941296
+      objectReference: {fileID: 0}
     - target: {fileID: 8014665650222212859, guid: ea20b3ad2c9833a48a46db1a95177cb5, type: 3}
       propertyPath: m_IsKinematic
       value: 1

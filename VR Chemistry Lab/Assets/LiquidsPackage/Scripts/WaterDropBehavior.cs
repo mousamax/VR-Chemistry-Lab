@@ -82,6 +82,7 @@ public class WaterDropBehavior : MonoBehaviour
             }
         }
         //Debug.Log(chem.Name);
+        Debug.Log("Right Befor Desteuction");
         Destroy(gameObject);
     }
 

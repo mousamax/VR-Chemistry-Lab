@@ -39,6 +39,8 @@ public class LiquidBehavior : MonoBehaviour
 
     bool Exited;
 
+    float FillAngle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,11 +76,11 @@ public class LiquidBehavior : MonoBehaviour
                 selectedSpawner = LiquidSpawner[i];
             }
         }
-        if (Vector3.Angle(Vector3.down, selectedSpawner.transform.forward) <= 90f && fill >= -0.1f && !Empty)
+        if (Vector3.Angle(Vector3.down, selectedSpawner.transform.forward) <= FillAngle && fill >= -0.1f && !Empty)
         {
             //dropping.Play();
-            //Debug.Log("entered");
-            selectedSpawner.GetComponent<WaterDropsSpawner>().StartDrop();
+            Debug.Log("entered");
+            
             float FillDroped = 0.03f * Time.deltaTime;
             fill -= FillDroped;
             if(fill <= -0.05)
@@ -89,11 +91,13 @@ public class LiquidBehavior : MonoBehaviour
             selectedSpawner.GetComponent<WaterDropsSpawner>().IncreaseFillValue(FillDroped);
             selectedSpawner.GetComponent<WaterDropsSpawner>().LiquidColor = Chem.Color;
             selectedSpawner.GetComponent<WaterDropsSpawner>().SetChemical(Chem);
+            selectedSpawner.GetComponent<WaterDropsSpawner>().StartDrop();
             rend.material.SetFloat(FillName, fill);
         }
         else
         {
             //dropping.Stop();
+            new WaitForSeconds(1);
             selectedSpawner.GetComponent<WaterDropsSpawner>().EndDrop();
             //Empty = true;
             for (int i = 1; i < length; i++)
@@ -148,6 +152,7 @@ public class LiquidBehavior : MonoBehaviour
         }
 
         transform.parent.gameObject.GetComponent<Rigidbody>().mass = Mass * 100;
+        FillAngle = 124.493f + 624.753f * fill - 695.585f * fill * fill - 8057.63f * fill * fill * fill + 417438 * fill * fill * fill * fill + 3103820 * fill * fill * fill * fill * fill;
 
     }
 
