@@ -17,6 +17,7 @@ public class WaterDropsSpawner : MonoBehaviour
     public Material BlueMat;
 
     public Chemicals chem;
+    bool Started;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +33,7 @@ public class WaterDropsSpawner : MonoBehaviour
         {
             //Debug.Log("true");
             currtime += Time.deltaTime;
-            if (currtime >= time)
+            if (currtime >= 0)
             {
                 
                 GameObject NewWaterDrop = Instantiate(LiquidDropsPrefab, gameObject.transform.position, Quaternion.identity);
@@ -86,5 +87,10 @@ public class WaterDropsSpawner : MonoBehaviour
     public void SetChemical(Chemicals LiquidChem)
     {
         chem = LiquidChem;
+    }
+
+    public void setStarted()
+    {
+        Started = true;
     }
 }

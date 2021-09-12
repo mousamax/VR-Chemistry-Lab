@@ -7840,6 +7840,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_02 (2) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7502427351715015846, guid: 9a801fa5be392c54eb2cacc4139f0116, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a801fa5be392c54eb2cacc4139f0116, type: 3}
 --- !u!1001 &1791641632
