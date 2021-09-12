@@ -18,11 +18,12 @@ public class Experiment3Instructions : MonoBehaviour
     [SerializeField] AudioClip instruction2Sound;
     [SerializeField] AudioClip finishingExperiment;
     float delay = 1f;
+    public float startOverDelay = 5f;
     public bool instruction1Done = false;
     public bool instruction2Done = false;
     public bool instruction3Done = false;
 
-
+    public ShamareekhController shamareekhController;
     private void Start()
     {
         wellDone.gameObject.SetActive(false);
@@ -90,6 +91,7 @@ public class Experiment3Instructions : MonoBehaviour
         changingText.gameObject.SetActive(true);
         changingText.text = "Choose from the following experiments:";
         beakers.gameObject.SetActive(true);
+        shamareekhController.StopShamareekh();
     }
     public void Finish()
     {
@@ -99,7 +101,8 @@ public class Experiment3Instructions : MonoBehaviour
         dixter.gameObject.SetActive(true);
         audioSource.Stop();
         audioSource.PlayOneShot(finishingExperiment);
-        Invoke("StartOver", Experiment1Instructions.instance.startOverDelay);
+        shamareekhController.StartShamareekh();
+        Invoke("StartOver", startOverDelay);
     }
 
 }

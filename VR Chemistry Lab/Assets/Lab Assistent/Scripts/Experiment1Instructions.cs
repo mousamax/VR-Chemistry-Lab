@@ -27,7 +27,7 @@ public class Experiment1Instructions : MonoBehaviour
     public bool instruction2Done = false;
     public bool instruction3Done = false;
 
-
+    public ShamareekhController shamareekhController;
     private void Start()
     {
         wellDone.gameObject.SetActive(false);
@@ -110,6 +110,7 @@ public class Experiment1Instructions : MonoBehaviour
         changingText.gameObject.SetActive(true);
         changingText.text = "Choose from the following experiments:";
         beakers.gameObject.SetActive(true);
+        shamareekhController.StopShamareekh();
     }
     public void Finish()
     {
@@ -119,6 +120,7 @@ public class Experiment1Instructions : MonoBehaviour
         dixter.gameObject.SetActive(true);
         audioSource.Stop();
         audioSource.PlayOneShot(finishingExperiment);
+        shamareekhController.StartShamareekh();
         Invoke("StartOver", startOverDelay);
     }
 
