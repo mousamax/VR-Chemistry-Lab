@@ -33,9 +33,9 @@ public class WaterDropsSpawner : MonoBehaviour
         {
             //Debug.Log("true");
             currtime += Time.deltaTime;
-            if (currtime >= 0)
+            if (currtime >= time || Started)
             {
-                
+                Started = false;
                 GameObject NewWaterDrop = Instantiate(LiquidDropsPrefab, gameObject.transform.position, Quaternion.identity);
                 NewWaterDrop.GetComponent<WaterDropBehavior>().SetFill(FillValue);
                 NewWaterDrop.GetComponent<WaterDropBehavior>().SetColor(LiquidColor);

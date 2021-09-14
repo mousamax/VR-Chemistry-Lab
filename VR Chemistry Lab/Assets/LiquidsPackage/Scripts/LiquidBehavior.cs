@@ -99,6 +99,7 @@ public class LiquidBehavior : MonoBehaviour
             //dropping.Stop();
             new WaitForSeconds(1);
             selectedSpawner.GetComponent<WaterDropsSpawner>().EndDrop();
+            selectedSpawner.GetComponent<WaterDropsSpawner>().setStarted();
             //Empty = true;
             for (int i = 1; i < length; i++)
             {

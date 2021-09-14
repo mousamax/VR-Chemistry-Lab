@@ -111,6 +111,8 @@ public class RawLiquidSource : MonoBehaviour
             }
             //dropping.Stop();
             LiquidDropsGenerator.GetComponent<WaterDropsSpawner>().EndDrop();
+            LiquidDropsGenerator.GetComponent<WaterDropsSpawner>().setStarted();
+
             //Empty = true;
         }
         rend.material.SetFloat(FillName, fill);
