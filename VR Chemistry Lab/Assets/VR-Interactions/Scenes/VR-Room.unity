@@ -2378,6 +2378,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 652166742408077064, guid: 777acf4b98b91794fbb57ba05d9d1e98, type: 3}
+      propertyPath: NitrogenGas
+      value: 
+      objectReference: {fileID: 644550374}
+    - target: {fileID: 652166742408077064, guid: 777acf4b98b91794fbb57ba05d9d1e98, type: 3}
       propertyPath: ChemistryManager
       value: 
       objectReference: {fileID: 489587998}
@@ -2497,6 +2501,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 285787052}
+    - target: {fileID: 652166742408077070, guid: 777acf4b98b91794fbb57ba05d9d1e98, type: 3}
+      propertyPath: ChemistryManager
+      value: 
+      objectReference: {fileID: 489587998}
     - target: {fileID: 652166742408077070, guid: 777acf4b98b91794fbb57ba05d9d1e98, type: 3}
       propertyPath: shamareekhController
       value: 
@@ -5093,7 +5101,7 @@ MonoBehaviour:
   instruction2Done: 0
   instruction3Done: 0
   shamareekhController: {fileID: 2044590561}
-  NitrogenGas: {fileID: 0}
+  ChemistryManager: {fileID: 489587998}
 --- !u!114 &1105655502 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 652166742408077064, guid: 777acf4b98b91794fbb57ba05d9d1e98, type: 3}

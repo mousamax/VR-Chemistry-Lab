@@ -25,7 +25,7 @@ public class Experiment3Instructions : MonoBehaviour
 
     public ShamareekhController shamareekhController;
 
-    public GameObject NitrogenGas;
+    public GameObject ChemistryManager;
     private void Start()
     {
         wellDone.gameObject.SetActive(false);
@@ -85,7 +85,7 @@ public class Experiment3Instructions : MonoBehaviour
     }
     public void StartOver()
     {
-        NitrogenGas.GetComponent<NitroginDioxideBehaviour>().ResetExperiment();
+        ChemistryManager.GetComponent<ChemistryManager>().ResetExperiment();
         wellDone.gameObject.SetActive(false);
         dixter.gameObject.SetActive(false);
         btn1.gameObject.SetActive(true);
