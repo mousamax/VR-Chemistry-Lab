@@ -26,6 +26,9 @@ public class Experiment2Instructions : MonoBehaviour
     public bool instruction3Done = false;
 
     public ShamareekhController shamareekhController;
+
+    public GameObject ChemistryManager;
+
     private void Start()
     {
         wellDone.gameObject.SetActive(false);
@@ -100,6 +103,7 @@ public class Experiment2Instructions : MonoBehaviour
     }
     void StartOver()
     {
+        ChemistryManager.GetComponent<ChemistryManager>().ResetExperiment();
         wellDone.gameObject.SetActive(false);
         dixter.gameObject.SetActive(false);
         btn1.gameObject.SetActive(true);

@@ -31,11 +31,11 @@ public class NitroginDioxideBehaviour : MonoBehaviour
         Inst1 = true;
         Inst2 = true;
         Inst3 = true;
-        oppacity = 35f/50f;
+        oppacity = 35f / 50f;
         //NitroginGasMat.SetColor("_BaseColor", new Color(0.753f, 0.259f, 0.04f, 1f));
         InitialPos = gameObject.transform.parent.position;
 
-     
+
     }
 
     // Update is called once per frame
@@ -66,10 +66,10 @@ public class NitroginDioxideBehaviour : MonoBehaviour
         }
 
 
-        if(Physics.CheckSphere(transform.position, 0.2f, FireMask))
+        if (Physics.CheckSphere(transform.position, 0.2f, FireMask))
         {
             Temp += 5f * Time.deltaTime;
-            if(Temp >= 49f)
+            if (Temp >= 49f)
             {
                 if (Exp2 && Inst3)
                 {
@@ -79,10 +79,10 @@ public class NitroginDioxideBehaviour : MonoBehaviour
                 Temp = 50;
             }
             oppacity = Temp / 50;
-            NitroginGasMat.SetColor("_BaseColor",new Color(0.753f,0.259f,0.04f, oppacity));
+            NitroginGasMat.SetColor("_BaseColor", new Color(0.753f, 0.259f, 0.04f, oppacity));
             //Debug.Log("entered if condition");
         }
-        else if(Physics.CheckSphere(transform.position, 0.2f, IceMask))
+        else if (Physics.CheckSphere(transform.position, 0.2f, IceMask))
         {
             Temp -= 5f * Time.deltaTime;
             if (Temp < 1f)
@@ -125,4 +125,13 @@ public class NitroginDioxideBehaviour : MonoBehaviour
     {
         Exp2 = true;
     }
+
+    public void ResetExperiment()
+    {
+        Exp2 = false;
+        Inst1 = true;
+        Inst2 = true;
+        Inst3 = true;
+    }
+
 }

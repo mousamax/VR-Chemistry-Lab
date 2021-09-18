@@ -1543,7 +1543,7 @@ GameObject:
   - component: {fileID: 323118920}
   m_Layer: 14
   m_Name: Cube (13)
-  m_TagString: Untagged
+  m_TagString: Sodium
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2378,6 +2378,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 652166742408077064, guid: 777acf4b98b91794fbb57ba05d9d1e98, type: 3}
+      propertyPath: ChemistryManager
+      value: 
+      objectReference: {fileID: 489587998}
+    - target: {fileID: 652166742408077064, guid: 777acf4b98b91794fbb57ba05d9d1e98, type: 3}
       propertyPath: instruction1Sound
       value: 
       objectReference: {fileID: 8300000, guid: cfb94fd0732465b46b852b8a067cbe18, type: 3}
@@ -2650,7 +2654,7 @@ GameObject:
   - component: {fileID: 422025921}
   m_Layer: 14
   m_Name: Cube (20)
-  m_TagString: Untagged
+  m_TagString: Sodium
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3396,7 +3400,7 @@ GameObject:
   - component: {fileID: 598810795}
   m_Layer: 14
   m_Name: Cube (16)
-  m_TagString: Untagged
+  m_TagString: Sodium
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4297,7 +4301,7 @@ GameObject:
   - component: {fileID: 799068811}
   m_Layer: 14
   m_Name: Cube (19)
-  m_TagString: Untagged
+  m_TagString: Sodium
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4743,7 +4747,7 @@ GameObject:
   - component: {fileID: 992697658}
   m_Layer: 14
   m_Name: Cube (17)
-  m_TagString: Untagged
+  m_TagString: Sodium
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5089,6 +5093,7 @@ MonoBehaviour:
   instruction2Done: 0
   instruction3Done: 0
   shamareekhController: {fileID: 2044590561}
+  NitrogenGas: {fileID: 0}
 --- !u!114 &1105655502 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 652166742408077064, guid: 777acf4b98b91794fbb57ba05d9d1e98, type: 3}
@@ -6000,7 +6005,7 @@ GameObject:
   - component: {fileID: 1286073608}
   m_Layer: 14
   m_Name: Cube (12)
-  m_TagString: Untagged
+  m_TagString: Sodium
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8110,7 +8115,7 @@ GameObject:
   - component: {fileID: 1686817873}
   m_Layer: 14
   m_Name: Cube (15)
-  m_TagString: Untagged
+  m_TagString: Sodium
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9152,7 +9157,7 @@ GameObject:
   - component: {fileID: 1810033092}
   m_Layer: 14
   m_Name: Cube (14)
-  m_TagString: Untagged
+  m_TagString: Sodium
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10155,7 +10160,7 @@ GameObject:
   - component: {fileID: 2009607482}
   m_Layer: 14
   m_Name: Cube (18)
-  m_TagString: Untagged
+  m_TagString: Sodium
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

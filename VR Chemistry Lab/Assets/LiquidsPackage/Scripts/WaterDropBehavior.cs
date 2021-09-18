@@ -17,7 +17,7 @@ public class WaterDropBehavior : MonoBehaviour
     public GameObject[] RedPrefabs;
     public GameObject[] OrangePrefabs;
     public GameObject[] BluePrefabs;
-
+    public GameObject steam;
 
     public Chemicals chem;
 
@@ -80,6 +80,12 @@ public class WaterDropBehavior : MonoBehaviour
                 GameObject NewParticle = Instantiate(WaterDropBlue);
                 NewParticle.transform.position = pos;
             }
+        }
+        else if (collision.gameObject.tag == "Sodium" && chem.Name == "HydroChloric acid")
+        {
+            GameObject ThisSteam = Instantiate(steam, transform.position, Quaternion.EulerAngles(new Vector3(90f, 0, 0)));
+            ThisSteam.transform.parent = collision.gameObject.transform;
+            ThisSteam.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
         }
         //Debug.Log(chem.Name);
         Debug.Log("Right Befor Desteuction");

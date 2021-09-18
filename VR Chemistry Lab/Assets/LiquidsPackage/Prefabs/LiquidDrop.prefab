@@ -147,6 +147,7 @@ MonoBehaviour:
   - {fileID: 6650779403645892785, guid: 5347ee24aa249fd4badd862eb19f1505, type: 3}
   - {fileID: 2733902447992181198, guid: 959d7dd6a30ad58449408d8f8981b4f8, type: 3}
   - {fileID: 6518193490268708354, guid: 808d1461e0166c54d9814a98d6cd9b77, type: 3}
+  steam: {fileID: 5770209797866782913, guid: 66917022c7ad1db41a6ab03121c059b3, type: 3}
 --- !u!96 &9104266646035700098
 TrailRenderer:
   serializedVersion: 2
